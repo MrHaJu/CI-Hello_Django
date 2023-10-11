@@ -33,6 +33,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "8000-mrhaju-ci-hello-django-rwq9ft8qnr.us2.codeanyapp.com",
     "127.0.0.1",
+    "mrhajuhellodjango-d779a0b250da.herokuapp.com",
 ]
 
 # Application definition
@@ -81,20 +82,14 @@ WSGI_APPLICATION = "django_todo.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
-#}
+# }
 
-DATABASES = {
-    'default': dj_database_url.parse(
-        os.environ.get(
-            'DATABASE_URL'
-        )
-    )
-}
+DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
