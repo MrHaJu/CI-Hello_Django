@@ -81,16 +81,17 @@ WSGI_APPLICATION = "django_todo.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
+#DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
-# }
+#}
+
 DATABASES = {
-    "default": dj_database_url.parse(
+    'default': dj_database_url.parse(
         os.environ.get(
-            "postgres://gnohqrpt:J8FhJZk9UGLmKZ75cFsfWoqTBPuYEJ0o@trumpet.db.elephantsql.com/gnohqrpt"
+            'DATABASE_URL'
         )
     )
 }
